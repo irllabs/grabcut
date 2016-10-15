@@ -7,11 +7,13 @@ Labeling tool for machine vision based segmentation tools
 
 1. Clone the repository, and check the project out as an existing project in Xcode
 2. Download the dataset (images and masks) from https://drive.google.com/drive/folders/0B4-8y_10KGM8S25rWlRKYXdNeFU?usp=sharing
-3. Update the following line (Line 15) in grabcut/main.cpp. Modify root to the absolute path where the dataset (images) is stored:
+3. Update the following line (Line 15) in grabcut/main.cpp:
 
 ```
 string root = "/xxx/dataset/";	//Update this line to the absolute path of dataset location
 ```
+
+Modify root to the absolute path where the dataset (images) is stored
 
 4. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using the following convention '00000xxx.jpg', using the next unused number from the images
 
