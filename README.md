@@ -12,11 +12,11 @@ Labeling tool for machine vision based segmentation tools
 ```
 string root = "/xxx/dataset/";	//Update this line to the absolute path of dataset location
 ```
-Modify root to the absolute path where the dataset (images) is stored
+...Modify root to the absolute path where the dataset (images) is stored..
 
 4. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using the following convention '00000xxx.jpg', using the next unused number from the images
 
-# Dependencies
+## Dependencies
 1. This is an Xcode project. It can be installed from the Mac App Store. https://itunes.apple.com/us/app/xcode/id497799835?mt=12
 2. The project also requires OpenCV. Install version 2.4.13 or 2.4.12. http://opencv.org/downloads.html. Place the directory in a path without any spaces.
 3. You will need to tell Xcode where to find the OpenCV libraries before you will be able to build the project successfully. 
