@@ -12,8 +12,8 @@ Labeling tool for machine vision based segmentation tools
 ```
 string root = "/xxx/dataset/";	//Update this line to the absolute path of dataset location
 ```
-
 Modify root to the absolute path where the dataset (images) is stored
+
 4. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using the following convention '00000xxx.jpg', using the next unused number from the images
 
 # Dependencies
