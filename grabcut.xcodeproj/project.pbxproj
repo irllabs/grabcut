@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A513C371DA3FDD700B23871 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A513C361DA3FDD700B23871 /* main.cpp */; };
-		3A513C3F1DA3FDFA00B23871 /* grabcut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A513C3D1DA3FDFA00B23871 /* grabcut.cpp */; settings = {ASSET_TAGS = (); }; };
+		3A513C3F1DA3FDFA00B23871 /* grabcut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A513C3D1DA3FDFA00B23871 /* grabcut.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +44,7 @@
 		3A513C2A1DA3FDD700B23871 = {
 			isa = PBXGroup;
 			children = (
+				41E33AD31DB44388007628FF /* lib */,
 				3A513C351DA3FDD700B23871 /* grabcut */,
 				3A513C341DA3FDD700B23871 /* Products */,
 			);
@@ -65,6 +66,13 @@
 				3A513C361DA3FDD700B23871 /* main.cpp */,
 			);
 			path = grabcut;
+			sourceTree = "<group>";
+		};
+		41E33AD31DB44388007628FF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +220,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/2.4.13_3/lib,
+				);
 				OTHER_LDFLAGS = (
 					"-lopencv_calib3d",
 					"-lopencv_contrib",
@@ -242,7 +253,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = /usr/local/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/opencv/2.4.13_3/lib,
+				);
 				OTHER_LDFLAGS = (
 					"-lopencv_calib3d",
 					"-lopencv_contrib",
@@ -287,6 +301,7 @@
 				3A513C3C1DA3FDD700B23871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
