@@ -1,9 +1,6 @@
 # Grabcut
 Labeling tool for machine vision based segmentation, based on [work by Kris Kitani](http://www.cs.cmu.edu/~kkitani/datasets/)
 
-
-# Instructions
-
 ## Dependencies
 ### IDE
 This project is ported to work in Apple's [Xcode](https://developer.apple.com/xcode/downloads/); it tested with  Xcode 7.3.1.
