@@ -55,14 +55,11 @@ Modify root to the absolute path where the dataset (images) is stored
 
 5. Use the following key controls to select modes when generating the masks:
 
-..* 'b' - Background Mode: Use your mouse to click and draw the background outline around the foreground object (Green)
-..* 'f' - Foreground Mode: Use your mouse to click and draw a few lines on the foreground object (Red)
-..* 'd' - Done: Indicate to move on to the next image
-..* 'r' - Reset: Indicate to start over
+  * 'b' - Background Mode: Use your mouse to click and draw the background outline around the foreground object (Green)
+  * 'f' - Foreground Mode: Use your mouse to click and draw a few lines on the foreground object (Red)
+  * 'd' - Done: Indicate to move on to the next image
+  * 'r' - Reset: Indicate to start over
 
 The image below shows an example of the background (green) and foreground (red) lines and the mask generated, as well as the mask applied to the image:
 
-![alt tag](https://raw.githubusercontent.com/cmuartfab/grabcut/blob/master/instructions_grabcut_controls.png)
-
-
-
+![alt tag](https://raw.githubusercontent.com/cmuartfab/grabcut/master/instructions_grabcut_controls.png)
