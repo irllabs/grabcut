@@ -1,24 +1,23 @@
 # Grabcut
-Labeling tool for machine vision based segmentation tools
+Labeling tool for machine vision based segmentation, based on [work by Kris Kitani](http://www.cs.cmu.edu/~kkitani/datasets/)
 
 
 # Instructions
 
 ## Dependencies
 ### IDE
-This project is ported to work in Apple's [Xcode]
+This project is ported to work in Apple's [Xcode](https://developer.apple.com/xcode/downloads/); it tested with  Xcode 7.3.1.
 
-Grabcut uses Xcode 7.3.1 or later which can be installed from the Mac App Store [here](https://developer.apple.com/xcode/downloads/).
+This project also uses the OpenCV library; it is tested with Versions  or 2.4.12 and 2.4.13.
 
-This project also uses the OpenCV library (Version 2.4.13 or 2.4.12) for C++. 
 ### Installing OpenCV on OS X
-Two ways to install OpenCV on OS X: 
+Two ways to install OpenCV on OS X; we recommend the first:
   1. Using [Homebrew](http://brew.sh), from the terminal: 
   ```
-	brew update
-	brew tap homebrew/science
-	brew install opencv
-	```
+brew update
+brew tap homebrew/science
+brew install opencv
+```
   	
   	* Make sure OpenCV's dependencies are also installed, you can check using `brew info opencv`
   2. Downloading [OpenCV](http://opencv.org/downloads.html) and building it using [cMake](https://cmake.org/download/)
