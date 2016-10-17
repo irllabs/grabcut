@@ -12,53 +12,62 @@ This project also uses the OpenCV library; it is tested with Versions  or 2.4.12
 
 ### Installing OpenCV on OS X
 Two ways to install OpenCV on OS X; we recommend the first:
-  1. Using [Homebrew](http://brew.sh), from the terminal: 
+  1. Use [Homebrew](http://brew.sh), from the terminal: 
   ```
 brew update
 brew tap homebrew/science
 brew install opencv
 ```
   	
-  	* Make sure OpenCV's dependencies are also installed, you can check using `brew info opencv`
-  2. Downloading [OpenCV](http://opencv.org/downloads.html) and building it using [cMake](https://cmake.org/download/)
+  	* Note: Make sure OpenCV's dependencies are also installed, you can check using `brew info opencv`
+	
+  2. Download [OpenCV](http://opencv.org/downloads.html) and building it using [cMake](https://cmake.org/download/)
   	* [This tutorial](http://blogs.wcode.org/2014/10/howto-install-build-and-use-opencv-macosx-10-10/) provides greater detail for setting up OpenCV with cMake and Xcode.
 
 ## Project Installation
-To install the Grabcut project, complete the following steps.
+To install the Grabcut project, complete the following steps:
 
-1. Clone this repository: `https://github.com/cmuartfab/grabcut.git`
+1. Clone this repository:
+ ```
+git clone with https://github.com/cmuartfab/grabcut.git`
+```
 
 2. Double click `grabcut.xcodeproj` to open it in Xcode
 
-3. Navigate to the /usr/local/lib directory and **select all** of the *libopencv.dylib* files and drag and drop them into the lib folder in the Xcode project
+3. Navigate to the /usr/local/lib directory and **select all** of the *libopencv.dylib* files and drag and drop them into the *lib* folder in the Xcode project.  You should see all the `libopencv.dylib` files in the Grabcut project lib folder. 
 
-4. You should see all the `libopencv.dylib` files in the Grabcut project lib folder. 
-5. In Xcode, click on `grabcut.xcodeproj` to open the build settings.
-6. Under *targets* on the left column, select grabcut.
-7. Make sure `Library Search Paths` points to where OpenCV is installed on your machine.
-	* If you used Homebrew, it should be in `usr/local/Cellar`
+5. In the Xcode project's *build settings* Under *targets* on the left column, select grabcut.
+
+7. Make sure the paths under `Library Search Paths` inclure the directory where OpenCV is installed on your machine.  If you used Homebrew to install OpenCV, it should be in `usr/local/Cellar`
 
 ## Running the Xcode project
 
-1. Clone the repository
-2. Double click on grabcut.xcodeproj to open the project in Xcode
-3. Update the following line (Line 15) in grabcut/main.cpp:
+1. Double click `grabcut.xcodeproj` to open it in Xcode
+2. *grabcut/main.cpp*, update the this line with the right path to the datasets folder
 
 ```
-string root = "/xxx/dataset/";	//Update this line to the absolute path of dataset location
+string root = "/Users/ali/Documents/Development/grabcut/dataset/";	//Update this line to point to your dataset folder
 ```
 
-Modify root to the absolute path where the dataset (images) is stored
+3. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using names with the format *00000xxx.jpg*, starting at 101, like this:
 
-4. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using the following convention '00000xxx.jpg', using the next unused number from the images
+```
+00000101.jpg
+00000102.jpg
+00000103.jpg
+...
+```
 
-5. Use the following key controls to select modes when generating the masks:
+5. Lable the forground and background with the following keys:
 
-  * 'b' - Background Mode: Use your mouse to click and draw the background outline around the foreground object (Green)
-  * 'f' - Foreground Mode: Use your mouse to click and draw a few lines on the foreground object (Red)
-  * 'd' - Done: Indicate to move on to the next image
-  * 'r' - Reset: Indicate to start over
-
-The image below shows an example of the background (green) and foreground (red) lines and the mask generated, as well as the mask applied to the image:
+  * 'b' - Background Mode: using the mouse, draw Green lines on the background, outlining the foreground object (see top left of image below)
+  * 'f' - Foreground Mode: using the mouse, draw Red lines within the outline of the foreground object (see top left of image below)
+  * 'd' - Done: moves to the next image 
+  * 'r' - Reset: resets current image
 
 ![alt tag](https://raw.githubusercontent.com/cmuartfab/grabcut/master/instructions_grabcut_controls.png)
+
+* Top Left: Green background and red foreground lines 
+* Top Right: Forground background separation; Forground in pulple, and background in green
+* Bottom Left: calculated mask
+* Bottom Right: Mask applied to original source image
