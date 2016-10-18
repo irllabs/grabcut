@@ -40,10 +40,10 @@ git clone with https://github.com/cmuartfab/grabcut.git`
 ## Running the Xcode project
 
 1. Double click `grabcut.xcodeproj` to open it in Xcode
-2. *grabcut/main.cpp*, update the this line with the right path to the datasets folder
+2. *grabcut/main.cpp*, update this line with the right path to the datasets folder
 
 ```
-string root = "/Users/ali/Documents/Development/grabcut/dataset/";	//Update this line to point to your dataset folder
+string root = "/xxx/dataset/";	//Update this line to point to your dataset folder
 ```
 
 3. To label and generate masks for new images, add new images to 'dataset/img/ASAP/' and name them using names with the format *00000xxx.jpg*, starting at 101, like this:
@@ -55,7 +55,7 @@ string root = "/Users/ali/Documents/Development/grabcut/dataset/";	//Update this
 ...
 ```
 
-5. Lable the forground and background with the following keys:
+4. Label the foreground and background with the following keys:
 
   * 'b' - Background Mode: using the mouse, draw Green lines on the background, outlining the foreground object (see top left of image below)
   * 'f' - Foreground Mode: using the mouse, draw Red lines within the outline of the foreground object (see top left of image below)
@@ -65,6 +65,6 @@ string root = "/Users/ali/Documents/Development/grabcut/dataset/";	//Update this
 ![alt tag](https://raw.githubusercontent.com/cmuartfab/grabcut/master/instructions_grabcut_controls.png)
 
 * Top Left: Green background and red foreground lines 
-* Top Right: Forground background separation; Forground in pulple, and background in green
+* Top Right: Foreground background separation; Foreground in pulple, and background in green
 * Bottom Left: calculated mask
 * Bottom Right: Mask applied to original source image
